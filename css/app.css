@@ -38,7 +38,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);
+    background-color: linear-gradient(#33ccff, #ff99cc);
     list-style-type: none;
 }
 
