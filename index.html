@@ -2,55 +2,118 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Memory Game</title>
-    <meta name="description" content="A simple memory game">
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/app.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <meta name="description" content="">
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Memory Game</h1>
-        </header>
-
-        <div class="score-panel">
-            <ul class="stars">
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-            </ul>
-
-            <span id="moves"></span>
-            <span class="timer"></span>
-
-            <div class="restart">
-                <i class="fa fa-repeat"></i>
-            </div>
-        </div>
-
-        <ul class="board"></ul>
+  <div class="container">
+    <header>
+      <h1>Memory Game</h1>
+    </header>
+    <section class="score-panel">
+      <ul class="stars">
+        <li>
+          <i class="fa fa-star"></i>
+        </li>
+        <li>
+          <i class="fa fa-star"></i>
+        </li>
+        <li>
+          <i class="fa fa-star"></i>
+        </li>
+      </ul>
+      <span class="moves">0</span> Moves
+      <div class="timer">00:00</div>
+      <div class="restart">
+        <i class="fa fa-repeat"></i>
+      </div>
+    </section>
+    <ul class="deck">
+      <!--globe card-->
+      <li class="card">
+        <i class="fa fa-globe"></i>
+      </li>
+      <!--globe card-->
+      <li class="card">
+        <i class="fa fa-globe"></i>
+      </li>
+      <!--space shuttle card-->
+      <li class="card">
+        <i class="fa fa-space-shuttle"></i>
+      </li>
+      <!--space shuttle card-->
+      <li class="card">
+        <i class="fa fa-space-shuttle"></i>
+      </li>
+      <!--sun card-->
+      <li class="card">
+        <i class="fa fa-sun-o"></i>
+      </li>
+      <!--sun card-->
+      <li class="card">
+        <i class="fa fa-sun-o"></i>
+      </li>
+      <!--moon card-->
+      <li class="card">
+        <i class="fa fa-moon-o"></i>
+      </li>
+      <!--moon card-->
+      <li class="card">
+        <i class="fa fa-moon-o"></i>
+      </li>
+      <!--astronaut card-->
+      <li class="card">
+        <i class="fas fa-user-astronaut"></i>
+      </li>
+      <!--astronaut card-->
+      <li class="card">
+        <i class="fas fa-user-astronaut"></i>
+      </li>
+      <!--compass card-->
+      <li class="card">
+        <i class="fas fa-compass"></i>
+      </li>
+      <!--compass card-->
+      <li class="card">
+        <i class="fas fa-compass"></i>
+      </li>
+      <!--bolt card-->
+      <li class="card">
+        <i class="fas fa-bolt"></i>
+      </li>
+      <!--bolt card-->
+      <li class="card">
+        <i class="fas fa-bolt"></i>
+      </li>
+      <!--rocket card-->
+      <li class="card">
+        <i class="fas fa-rocket"></i>
+      </li>
+      <!--rocket card-->
+      <li class="card">
+        <i class="fas fa-rocket"></i>
+      </li>
+    </ul>
+  </div>
+  <!--modal content-->
+  <div id="modal-window">
+    <div class="content">
+      <span class="close">&times;</span>
+      <h3 class="notification">Great! You won the game!!!</h3>
+      <p class="star-m">Your Score:<span></span></p>
+      <p class="time-m">Your Time: <span></span></p>
+      <button class="button">Start new Game</button>
     </div>
-
-    <div class="modal">
-        <div class="modal-content">
-            <h1>Oh my gosh, you cracked it!</h1>
-            <p>Elapsed time:
-                <span id="elapsed-time"></span>
-            </p>
-            <p>Stars:
-                <i id="first-star" class="fa fa-star"></i>
-                <i id="second-star" class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-            </p>
-            <p>Moves:<span id="total-moves"></span></p>
-            <button class="btn-restart" onclick="toggleModal(); restartGame()">Restart</button>
-        </div>
-    </div>
-
-    <script src="js/app.js"></script>
+  </div>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
