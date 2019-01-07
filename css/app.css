@@ -144,7 +144,7 @@ html {
     float: right;
   }
   
-  .moves {
+  .moves-done {
     font-size: 1em;
   }
   
@@ -165,17 +165,17 @@ html {
   .content {
     display: block;
     background: lightgrey url('../img/geometry2.png');
-    margin: 5% auto;
-    padding: 0.4em;
-    width: 70%;
-    color: purple;
-    border: 3px dotted coral;
+    margin: 3% auto;
+    padding: 0.3em;
+    width: 80%;
+    color: #000;
+    border: 2px solid #000;
     text-align: center;
-    border-radius: 5%;
+    border-radius: 2%;
   }
   
   .button {
-    background: coral;
+    background: #64ff00;
     padding: 0.8em;
     color: purple;
     border-radius: 15px;
@@ -191,7 +191,7 @@ html {
   .close:hover,
   .close:focus {
     cursor: pointer;
-    color: coral;
+    color: #64ff00;
     text-decoration: none;
   }
   
@@ -211,11 +211,8 @@ html {
   
   .star-m span li {
     display: inline-block;
-    color: gold;
-    text-shadow: 0.1vw 0.5vw coral;
+    color: #000;
   }
-  
-  /***Responsive***/
   
   @media screen and (max-width: 375px) {
     .deck {
