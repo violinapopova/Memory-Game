@@ -171,10 +171,10 @@ function restartScoreCounter() {
 }
 
 /*MODAL TRIGGER*/
-const modal = document.querySelector('#modal-window');
+const modal = document.querySelector('#modal-area');
 const closeBtn = document.querySelector('.close');
-let starWon = document.querySelector('.star-m span');
-let t = document.querySelector('.time-m span');
+let starWon = document.querySelector('.player-score span');
+let t = document.querySelector('.player-time span');
 let finalStars = document.querySelector('.stars');
 
 function gameNotification() {
