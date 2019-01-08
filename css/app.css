@@ -18,7 +18,7 @@ html {
   
   body {
     background: linear-gradient(90deg, rgba(15,208,228,1) 0%, rgba(37,11,166,1) 100%);
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
   }
   
   header,
@@ -36,8 +36,8 @@ html {
   }
   
   h1 {
-    font-weight: 300;
-    color: rgb(199, 204, 150);
+    font-weight: 200;
+    color: #c7cc96;
     font-size: 3em;
     margin-bottom: 0;
   }
@@ -65,7 +65,7 @@ html {
     width: 125px;
     background: #062946;
     font-size: 0;
-    color: #ffffff;
+    color: #fff;
     border-radius: 8px;
     cursor: pointer;
     display: flex;
@@ -79,7 +79,6 @@ html {
     background: #6773df;
     cursor: default;
     pointer-events: none;
-    /*remove pointer and disable double click on open card*/
   }
   
   .deck .card.show {
@@ -92,7 +91,6 @@ html {
     background: #5acc64;
     font-size: 33px;
     pointer-events: none;
-    /*remove pointer and disable opening matched cards*/
   }
   
   /*
@@ -122,19 +120,19 @@ html {
     font-size: 0.5em;
   }
   
-  /*--hiding stars on moves--*/
+  /*moves counter*/
   
   .hide i {
     display: none;
   }
   
   .restart {
+    color: #c1cc22;
+    cursor: pointer; 
+    font-size: 1em;
     margin-top: 10px;
     padding-right: 10px;
     float: right;
-    cursor: pointer;
-    color: rgb(193, 204, 34);
-    font-size: 1em;
   }
   
   .timer {
@@ -148,44 +146,43 @@ html {
     font-size: 1em;
   }
   
-  /*--modal window--*/
+  /*modal window*/
   
-  #modal-window {
+  #modal-area {
+    background-color: transparent;
     display: none;
-    position: fixed;
-    z-index: 1;
     top: 5%;
     left: 20%;
     height: 100%;
     width: 100%;
     overflow: auto;
-    background-color: transparent;
+    z-index: 1;
+    position: fixed;  
   }
   
-  .content {
+  .popup-box {
+    background:white;
+    border: 3px solid #d9d9d9;
     display: block;
-    background: lightgrey url('../img/geometry2.png');
     margin: 3% auto;
     padding: 0.3em;
     width: 80%;
     color: #000;
-    border: 2px solid #000;
     text-align: center;
-    border-radius: 2%;
   }
   
   .button {
     background: #64ff00;
     padding: 0.8em;
-    color: purple;
-    border-radius: 15px;
+    color: #4a86e8;
+    border-radius: 2px;
     cursor: pointer;
   }
   
   .close {
-    color: purple;
-    float: right;
     font-size: 3.7vw;
+    color: #4a86e8;
+    float: right;
   }
   
   .close:hover,
@@ -204,12 +201,12 @@ html {
     font-size: 1em;
   }
   
-  p.star-m,
-  p.time-m {
+  p.player-score,
+  p.player-time {
     font-size: 1em;
   }
   
-  .star-m span li {
+  .player-score span li {
     display: inline-block;
     color: #000;
   }
@@ -247,7 +244,7 @@ html {
   }
   
   @media screen and (min-width: 200px) and (max-width: 800px) {
-    #modal-window {
+    #modal-area {
       left: auto;
     }
   }
