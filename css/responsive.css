@@ -1,0 +1,41 @@
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    #modal-area {
+        left: auto;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .deck {
+        min-height: 300px;
+        width: 85%;
+        padding: 2%;
+    }
+
+    .deck .card.show,
+    .deck .card.match {
+        font-size: 1.563em;
+    }
+
+    .deck .card {
+        width: 4.063em;
+        height: 4.063em;
+    }
+}
+
+@media screen and (min-width: 378px) and (max-width: 660px) {
+    .deck {
+        min-height: 450px;
+        width: 85%;
+        padding: 2%;
+    }
+
+    .deck .card.show,
+    .deck .card.match {
+        font-size: 1.875em;
+    }
+
+    .deck .card {
+        width: 5.313em;
+        height: 5.313em;
+    }
+}
