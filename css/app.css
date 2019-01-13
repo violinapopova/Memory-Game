@@ -1,250 +1,198 @@
 html {
     box-sizing: border-box;
-  }
-  
+}
+    
   *,
   *::before,
   *::after {
     box-sizing: border-box;
-  }
-  
-  html,
-  body {
+}
+    
+html,
+body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-  }
-  
-  body {
+}
+    
+body {
     background: linear-gradient(90deg, rgba(15,208,228,1) 0%, rgba(37,11,166,1) 100%);
     font-family: 'Source Sans Pro', sans-serif;
-  }
-  
-  header,
-  section,
-  div {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .container {
+}
+    
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
+}
+    
+header,
+div,
+section {
+    margin: 0 auto;
+    max-width: 50em;
+}
   
-  h1 {
+h1 {
     font-weight: 200;
     color: #c7cc96;
     font-size: 3em;
     margin-bottom: 0;
-  }
-  
-  /*
-   * Styles for the deck of cards
-   */
-  
-  .deck {
+}
+    
+/*Styles for the deck of cards*/
+    
+.deck {
     width: 660px;
     min-height: 680px;
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    padding: 32px;
-    border-radius: 10px;
+    padding: 2em;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 0 0 3em;
-  }
-  
-  .deck .card {
+}
+    
+.deck .card {
     height: 125px;
     width: 125px;
     background: #062946;
     font-size: 0;
     color: #fff;
-    border-radius: 8px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-  }
-  
-  .deck .card.open {
+}
+    
+.deck .card.open {
     transform: rotateY(180deg);
     background: #6773df;
     cursor: default;
     pointer-events: none;
-  }
-  
-  .deck .card.show {
+}
+    
+.deck .card.show {
     font-size: 33px;
     transition: 0.4s;
-  }
-  
-  .deck .card.match {
+}
+    
+.deck .card.match {
     cursor: default;
     background: #5acc64;
     font-size: 33px;
     pointer-events: none;
-  }
-  
-  /*
-   * Styles for the Score Panel
-   */
-  
-  .score-panel {
+}
+    
+/*Styles for the Score Panel*/
+    
+.score-panel {
     text-align: left;
     width: 80%;
-    margin-bottom: 0;
     font-size: 1.5em;
-    color: #fff;
     float: left;
-  }
-  
-  .stars {
+    color: #fff;
+}
+    
+.stars {
+    display: inline-block;
     list-style: none;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
     margin: 0 5px 0 0;
-  }
-  
-  .stars li {
+    padding: 0;
+}
+    
+.stars li {
     display: inline-block;
-    color: yellow;
     font-size: 0.5em;
-  }
-  
-  /*moves counter*/
-  
-  .hide i {
+    color: #e6d32d;
+}
+    
+/*MOVES COUNTER*/
+    
+.hide i {
     display: none;
-  }
-  
-  .restart {
+}
+    
+.restart {
+    float: right;
+    cursor: pointer;
     color: #c1cc22;
-    cursor: pointer; 
+    padding-right: 0.625em;
     font-size: 1em;
-    margin-top: 10px;
-    padding-right: 10px;
-    float: right;
-  }
-  
-  .timer {
-    margin-top: 5px;
-    padding-bottom: 5px;
+}
+    
+.played-time {
+    margin-top: 0.313em;
+    padding-bottom: 0.313em;
     font-size: 1em;
     float: right;
-  }
-  
-  .moves-done {
+}
+    
+.moves-done {
     font-size: 1em;
-  }
-  
-  /*modal window*/
-  
-  #modal-area {
-    background-color: transparent;
+}
+    
+/*MODAL WINDOW*/
+    
+#modal-area {
+    background-color: rgba(46, 61, 73, 0.5);
     display: none;
-    top: 5%;
-    left: 20%;
+    top: 2%;
+    left: 24%;
     height: 100%;
     width: 100%;
     overflow: auto;
     z-index: 1;
     position: fixed;  
-  }
-  
-  .popup-box {
-    background:white;
-    border: 3px solid #d9d9d9;
+}
+    
+.popup-box {
+    background:#fff;
+    border: 2px solid #062946;
     display: block;
     margin: 3% auto;
     padding: 0.3em;
     width: 80%;
-    color: #000;
+    color: #062946;
     text-align: center;
-  }
-  
-  .button {
-    background: #64ff00;
-    padding: 0.8em;
-    color: #4a86e8;
-    border-radius: 2px;
+}
+    
+.modal-button {
+    background: #062946;
+    color: #64ff00;
+    padding: 1em;
     cursor: pointer;
-  }
-  
-  .close {
-    font-size: 3.7vw;
+}
+    
+.button-close {
+    font-size: 2em;
     color: #4a86e8;
     float: right;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+    
+.button-close:hover,
+.button-close:focus {
     cursor: pointer;
     color: #64ff00;
-    text-decoration: none;
-  }
-  
-  h3.notification {
-    font-size: 2em;
+}
+    
+h3.notification {
     margin-bottom: 0;
-  }
-  
-  p.notification {
+    font-size: 2em;
+}
+    
+p.notification,
+p.player-score,
+p.player-time {
     font-size: 1em;
-  }
-  
-  p.player-score,
-  p.player-time {
-    font-size: 1em;
-  }
-  
-  .player-score span li {
+}
+    
+.player-score span li {
     display: inline-block;
-    color: #000;
-  }
-  
-  @media screen and (max-width: 375px) {
-    .deck {
-      width: 90%;
-      min-height: 300px;
-      padding: 3%;
-    }
-    .deck .card {
-      height: 65px;
-      width: 65px;
-    }
-    .deck .card.show,
-    .deck .card.match {
-      font-size: 25px;
-    }
-  }
-  
-  @media screen and (min-width: 378px) and (max-width: 660px) {
-    .deck {
-      width: 90%;
-      min-height: 450px;
-      padding: 3%;
-    }
-    .deck .card {
-      height: 85px;
-      width: 85px;
-    }
-    .deck .card.show,
-    .deck .card.match {
-      font-size: 30px;
-    }
-  }
-  
-  @media screen and (min-width: 200px) and (max-width: 800px) {
-    #modal-area {
-      left: auto;
-    }
-  }
+    color: #062946;
+}
